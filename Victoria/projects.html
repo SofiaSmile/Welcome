@@ -1,0 +1,381 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<title>Projects</title>
+		<!--bootstrap.min.css-->
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+		<link href="style.css" type="text/css" rel="stylesheet" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+	<style>
+		.view{
+			overflow:hidden;
+			position:relative;
+		}
+		.view-tenth a{
+			display:block;
+		}
+		.view-tenth img{
+			-webkit-transform:scaleY(1);
+			-moz-transform:scaleY(1);
+			-o-transform:scaleY(1);
+			-ms-transform:scaleY(1);
+			transform:scaleY(1);
+			-webkit-transition:all 0.7s ease-in-out;
+			-moz-transition:all 0.7s ease-in-out;
+			-o-transition:all 0.7s ease-in-out;
+			-ms-transition:all 0.7s ease-in-out;
+			transition:all 0.7s ease-in-out;
+			width:100%;
+		}
+		.view-tenth .mask{
+			background-color:rgba(67,120,255,0.82);
+			-webkit-transition:all 0.5s linear;
+			-moz-transition:all 0.5s linear;
+			-o-transition:all 0.5s linear;
+			-ms-transition:all 0.5s linear;
+			transition:all 0.5s linear;
+			-ms-filter:"progid:DXImageTranform.Microsoft.Alpha(Opacity=0)";
+			filter:alpha(opacity=0);
+			width:100%;
+			height:100%;
+			position:absolute;
+			overflow:hidden;
+			top:0;
+			left:0;
+			padding:3em;
+			text-align:center;
+			opacity:0;
+		}
+		
+		.view-tenth h3{
+			border-bottom: 1px solid rgba(255, 255, 255, 0.48); 
+			-webkit-transform:scale(0);
+			-moz-transform: scale(0);
+			-o-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			color: #fff;
+			-webkit-transition: all 0.5s linear;
+			-moz-transition: all 0.5s linear;
+			-o-transition: all 0.5s linear;
+			-ms-transition: all 0.5s linear;
+			transition: all 0.5s linear;
+			-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			filter: alpha(opacity=0);
+			opacity: 0;
+			padding-bottom: .4em;
+			margin-bottom: .5em;
+		}
+		.view-tenth p{
+			color:#fff;
+			-ms-filter:"progid:DXImageTransform.Microsoft.ALpha(Opacity=0)";
+			filter:alpha(opacity=0);
+			opacity:0;
+			-webkit-transform:scale(0);
+			-moz-transform:scale(0);
+			-o-transform:scale(0);
+			-ms-transform:scale(0);
+			transform:scale(0);
+			-webkit-transition:all 0.5s linear;
+			-moz-transition:all 0.5s linear;
+			-o-transition:all 0.5s linear;
+			-ms-transition:all 0.5s linear;
+			transition:all 0.5s linear;
+		}
+		.view-tenth:hover img{
+			-webkit-transform:scale(10);
+			-moz-transform:scale(10);
+			-o-transform:scale(10);
+			-ms-transform:scale(10);
+			transform:scale(10);
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			filter:alpha(opacity=0);
+		}
+		.view-tenth:hover .mask{
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			filter:alpha(opacity=100);
+			opacity:1;
+		}
+		.view-tenth:hover h3,.view-tenth:hover p{
+			-webkit-transform:scale(1);
+			-moz-transform:scale(1);
+			-o-transform:scale(1);
+			-ms-transform:scale(1);
+			transform:scale(1);
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			filter:alpha(opacity=100);
+			opacity:1;
+		}
+		h2,h3,h6,p{
+			font-family: 'Kosugi Maru', sans-serif;
+			color:rgba(0,0,0,0.7);
+		}
+		@media(max-width:1200px){
+			.container .custom h2,h6,p,a{
+				font-size:14px;
+			}
+		}
+		.custom1 p,.custom2 p{
+			font-size:1px;
+		}
+		.custom1,.custom2{
+			line-height:10px;
+		}
+		@media(max-width:1100px){
+			.projects h3,p{
+				font-size:1px;
+			}
+			.custom1 p,.custom2 p{
+				font-size:0.3px;
+			}
+			.custom1 .mask,.custom2 .mask{
+				padding:3px;
+			}
+			.custom2 h3{
+				text-align:center;
+			}
+		}
+		@media(max-width:768px){
+			.projects p{
+				text-align:center;
+			}
+			.projects .row-pad2{
+				margin-top:2rem;
+			}
+		}
+		@media(max-width:400px){
+			.custom p,
+			.text-left h3,
+			.text-left p,
+			.j-footer p{
+				font-size:0.8rem;
+			}
+		}
+	</style>
+	<body>
+		<div class="banner about-bbanner">
+			<div class="banner-cinfo">
+				<div class="header">
+					<div class="container">
+						<div class="logo">
+							<h1><a href="#">Courage</a></h1>
+						</div>
+						<div class="menu">
+							<a href="#" class="navicon"></a>
+							<div class="toggle effect-3">
+								<ul class="toggle-menu">
+									<li><a href="MyPortfolioV.html">Home</a></li>
+									<li><a href="skills.html">Skills</a></li>
+									<li><a href="projects.html" class="active">My Projects</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="social-blicon">
+							<a href="#" class="social-button twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="social-button facebook"><i class="fab fa-facebook-square"></i></a>
+							<a href="#" class="social-button google"><i class="fab fa-google-plus"></i></a>
+							<a href="#" class="social-button dribbble"><i class="fab fa-dribbble"></i></a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="j-address">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-xs-12 col-md-4"><i class="fas fa-map-marker-alt"></i>  Japan</div>
+							<div class="col-sm-12 col-xs-12 col-md-4"><i class="fas fa-mobile-alt"></i>  +81 123-4567-8900</div>
+							<div class="col-sm-12 col-xs-12 col-md-4"><i class="fas fa-envelope"></i><a href="mailto:blueskytree11@gmail.com">  blueskytree11@gmail.com</a></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="about">
+			<div class="container">
+				<div class="c-title">
+					<h2 class="j-title">Projects</h2>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<img src="images/ZeroHolding.png" class="img-thumbnail"/>
+				</div> 
+				<div class="col-lg-6 col-md-12 col-sm-12 custom">
+					<h2 class="mb-3 mt-3">ZERO HOLDING,Inc.</h2>
+					<h6 class="mb-2" style="line-height:1.8em;">きっかけ：AIの魅力を感じてテーマにしてこのサイトを作って、「AIは未来のビジネスや生活には、どんな影響を与えるのでしょうか」という疑問を持って取り組んでいました。</h6>
+					<p class="mb-2">担当：Logo / Planning / Design / Coding / Contents Creation</p>
+					<p class="mb-2">開発言語：HTML5, CSS3, Bootstrap4, Font Awesome</p>
+					<p class="mb-2">開発期間：1 週間</p>
+					<p class="mb-2">ウェブレスポンシブ：対応済</p>
+					<a class="btn btn-primary" href="https://sofianewjourney.github.io/Knowledge/portfolio/zeroHolding.html" target="_blank">詳細</a>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="col-lg-6 col-md-12 col-sm-12 custom">
+					<h2 class="mb-3">Yummy</h2>
+					<h6 class="mb-2" style="line-height:1.8em;">きっかけ：人は美味しいものを食べれば、元気になれる。良い人生を送るためのご飯の中にどんな謎がありますか。探しながら料理の世界を楽しんでいます。</h6>
+					<p class="mb-2">担当：Logo / Planning / Design / Coding / Contents Creation</p>
+					<p class="mb-2">開発言語：HTML5, CSS3, Bootstrap4, Font Awesome</p>
+					<p class="mb-2">開発期間：2 週間</p>
+					<p class="mb-2">ウェブレスポンシブ：対応済</p>
+					<a class="btn btn-primary" href="https://sofianewjourney.github.io/Knowledge/portfolio/yummy.html" target="_blank">詳細</a>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+					<img src="images/yummy.png" class="img-thumbnail"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<img src="images/journeygo.png" class="img-thumbnail"/>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12 custom">
+					<h2 class="mb-3 mt-3">Journey Go</h2>
+					<h6 class="mb-2" style="line-height:1.8em;">きっかけ：旅は読書と同じように、小さな自分の世界を大きくする。世界には、六大陸と三大洋があるんけど、行ったことがない場所がたくさんあります。旅行のような感じで、このページを作りました。</h6>
+					<p class="mb-2">担当：Logo / Planning / Design / Coding / Contents Creation</p>
+					<p class="mb-2">開発言語：HTML5, CSS3, Bootstrap4, Font Awesome</p>
+					<p class="mb-2">開発期間：2 週間</p>
+					<p class="mb-2">ウェブレスポンシブ：対応済</p>
+					<a class="btn btn-primary" href="https://sofianewjourney.github.io/Knowledge/portfolio/journey.html" target="_blank">詳細</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--projects-->
+		
+		<div class="about projects">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="view view-tenth">
+						<a href="images/asakusa.jpg" target="_blank">
+							<img src="images/asakusa.jpg" alt="my projects" class="img-fluid"/>
+							<div class="mask text-left">
+								<h3 class="text-center">五重塔</h3>
+								<p>担当：Photograph, Neural Style Transfer</p><br/>
+								<p>ツール：Smart Phone, Python, Opencv</p><br/>
+								<p>スタイル：The Great Wave off Kanagawa</p>
+							</div>
+						</a>
+					</div><br/>
+					<div class="view view-tenth">
+						<a href="images/picaso.jpg" target="_blank">
+							<img src="images/picaso.jpg" alt="my projects" class="img-fluid"/>
+							<div class="mask text-left">
+								<h3 class="text-center">ぐるぐる観覧車</h3>
+								<p>担当：Photograph, Neural Style Transfer</p><br/>
+								<p>ツール：Smart Phone, Python, Opencv</p><br/>
+								<p>スタイル：Pablo Picasso</p>
+							</div>
+						</a>
+					</div>
+				</div>			
+				<div class="col-md-4 col-xs-12 col-sm-12 row-pad2">	
+						<div class="view view-tenth">
+							<a href="images/starry-night.jpg" target="_blank">
+								<img src="images/starry-night.jpg" alt="my projects" class="img-fluid" />
+								<div class="mask text-left">
+									<h3 class="text-center">大雪</h3>
+									<p>担当：Photograph, Neural Style Transfer</p><br/>
+									<p>ツール：Smart Phone, Python, Opencv</p><br/>
+									<p>スタイル：The Starry Night</p>
+								</div>
+							</a>
+						</div><br/>
+						<div class="view view-tenth custom1">
+							<a href="images/scream.jpg" target="_blank">
+								<img src="images/scream.jpg" alt="my projects" class="img-fluid"/>
+								<div class="mask text-left">
+									<h3 class="text-center">順風満帆</h3>
+									<p>担当：Photograph, Neural Style Transfer</p><br/>
+									<p>ツール：Smart Phone, Python, Opencv</p><br/>
+									<p>スタイル：The Scream</p>
+								</div>
+							</a>
+						</div><br/>
+						<div class="view view-tenth custom2">
+							<a href="images/picabia.jpg" target="_blank">
+								<img src="images/picabia.jpg" alt="my projects" class="img-fluid"/>
+								<div class="mask text-left">
+									<h3>China Festival</h3>
+									<p>担当：Photograph, Neural Style Transfer</p><br/>
+									<p>ツール：Smart Phone, Python, Opencv</p><br/>
+									<p>スタイル：Francis Picabia</p>
+								</div>
+							</a>
+						</div><br/>
+						<div class="view view-tenth">
+						<a href="images/mosaic.jpg" target="_blank">
+							<img src="images/mosaic.jpg" alt="my projects" class="img-fluid"/>
+							<div class="mask text-left">
+								<h3 class="text-center">オレンジ百合の笑顔</h3>
+								<p>担当：Photograph, Neural Style Transfer</p><br/>
+								<p>ツール：Smart Phone, Python, Opencv</p><br/>
+								<p>スタイル：Mosaic</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12 row-pad2">
+					<div class="view view-tenth">
+						<a href="images/feathers2.jpg" target="_blank">
+							<img src="images/feathers2.jpg" alt="my projects" class="img-fluid"/>
+							<div class="mask text-left">
+								<h3 class="text-center">Fly</h3>
+								<p>担当：Photograph, Neural Style Transfer</p><br/>
+								<p>ツール：Smart Phone, Python, Opencv</p><br/>
+								<p>スタイル：Feathers</p>
+							</div>
+						</a>
+					</div><br/>
+					<div class="view view-tenth">
+						<a href="images/candy.jpg" target="_blank">
+							<img src="images/candy.jpg" alt="my projects" class="img-fluid"/>
+							<div class="mask text-left">
+								<h3 class="text-center">可愛い子ども</h3>
+								<p>担当：Photograph, Neural Style Transfer</p><br/>
+								<p>ツール：Smart Phone, Python, Opencv</p><br/>
+								<p>スタイル：Candy</p>
+							</div>
+						</a>
+					</div><br/>
+
+				</div>
+				
+				
+				<div class="clearfix"> </div>
+			</div> 
+		</div>
+	</div>
+		
+		
+		<!--projects-->
+		
+		<div class="j-footer">
+			<div class="container">
+				<p>© 2020 All rights reserved | Design by Hosino tukiakari</p>
+			</div>
+		</div>
+		
+		<script>
+			$('.navicon').on('click',function(e){
+				e.preventDefault();
+				$(this).toggleClass('navicon--active');
+				$('.toggle').toggleClass('toggle--active');
+			});
+		</script>
+	</body>
+	</html>

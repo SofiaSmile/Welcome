@@ -1,0 +1,1667 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<title>Yummy</title>
+		<!--bootstrap.min.css-->
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<!--datetimepicker-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/ja.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+		<style>
+		html{
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+			box-sizing:border-box;
+			scroll-behavior:smooth;
+		}
+		body{
+			font-family:Arial;
+			font-size:18px;
+			font-weight:300;
+			line-height:2;
+			color:#5e493a;
+		}
+		a{
+			color:#fb6e14;
+			-webkit-transition:0.5s;
+			-o-transition:0.5s;
+			-moz-transition:0.5s;
+			-ms-transition:0.5s;
+			transition:0.5s;
+		}
+		a:hover,a:focus,a:active{
+			color:#bf4c03;
+			text-decoration:none;
+		}
+		h1,h2,h3,h4,h5,h6{
+			font-family:"Playfair Display",sans-serif;
+			color:#000;
+		}
+		p{
+			margin-bottom:30px;
+		}
+		.btn{
+			margin-right:4px;
+			margin-bottom:4px;
+			font-family:"Playfair Display",sans-serif;
+			font-size:12px;
+			letter-spacing:2px;
+			text-transform:uppercase;
+			font-weight:700;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			-ms-border-radius:4px;
+			-o-border-radius:4px;
+			-webkit-transition:0.5s;
+			-o-transition:0.5s;
+			-moz-transition:0.5s;
+			-ms-transition:0.5s;
+			transition:0.5s;
+		}
+		.btn:hover,.btn:active,.btn:focus{
+			box-shadow:none !important;
+			outline:none !important;
+		}
+		.btn-primary{
+			background:#fb6e14;
+			color:#fff;
+			border:2px solid #fb6e14;
+		}
+		.btn-primary:hover,.btn-primary:focus,.btn-primary:active{
+			background:#f16104 !important;
+			border-color:#f16104 !important;
+		}
+		.btn-primary.btn-outline{
+			background:transparent;
+			color:#fb6e14;
+			border:2px solid #fb6e14;
+		}
+		.btn-primary.btn-outline:hover,.btn-primary.btn-outline:focus,.btn-primary.btn-outline:active{
+			background:#fb6e14;
+			color:#fff;
+		}
+		.form-control{
+			box-shadow:none;
+			background:transparent;
+			border:2px solid rgba(0,0,0,0.1);
+			height:54px;
+			font-size:18px;
+			font-weight:300;
+		}
+		.form-control:active,.form-control:focus{
+			outline:none;
+			box-shadow:none;
+			border-color:#fb6e14;
+		}
+		/*flexslider*/
+		#yummy-home .flexslider{
+			border:none;
+			position:relative;
+			z-index:1;
+			margin-bottom:0;
+		}
+		#yummy-home .flexslider .yummy-text{
+			position:absolute;
+			z-index:3;
+			width:100%;
+			top:50%;
+			margin-top:-212px;
+			text-align:center;
+		}
+		#yummy-home .flexslider .yummy-text h1{
+			margin:0;
+			padding:0;
+			font-family: 'Nunito', sans-serif;
+			font-size:300px;
+			font-weight:800;
+			font-style:italic;
+			color:#fff;
+			-webkit-transition:0.3s;
+			-o-transition:0.3s;
+			-moz-transition:0.3s;
+			-ms-transition:0.3s;
+			transition:0.3s;
+		}
+		@media screen and (max-width:992px){
+			#yummy-home .flexslider .yummy-text h1{
+				font-size:100px;
+			}
+		}
+		@media screen and (max-width:800px){
+			#yummy-home .flexslider .yummy-text h1{
+				margin-top:1em;
+			}
+		}
+		#yummy-home .flexslider .yummy-text h2{
+			margin:0;
+			padding:0;
+			padding-left:2em;
+			font-family: 'Gupter', serif;
+			font-weight:300;
+			font-size:40px;
+			letter-spacing:2px;
+			color:#fff;
+			-webkit-transition:0.3s;
+			-o-transition:0.3s;
+			-moz-transition:0.3s;
+			-ms-transition:0.3s;
+			transition:0.3s;
+			font-style:italic;
+		}
+		@media screen and (max-width:768px){
+			#yummy-home .flexslider .yummy-text h2{
+				font-size:20px;
+			}
+		}
+		#yummy-home .flexslider .yummy-text h2 span{
+			font-family: 'Gupter', serif;
+			font-style:italic;
+			text-transform:none;
+		}
+		#yummy-home .flexslider .slides li{
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+		#yummy-home .flexslider .yummy-overlay{
+			position:absolute;
+			z-index:3;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			opacity:0.5;
+			background:#000;
+		}
+		
+		.yummy-heading .heading{
+			font-family: 'Gupter', serif;
+			font-size:50px;
+			font-style:italic;
+			position:relative;
+			padding-bottom:30px;
+			margin-bottom:30px;
+		}
+		@media screen and (max-width:768px){
+			.yummy-heading .heading{
+				font-size:30px;
+			}
+		}
+		.yummy-heading .heading:after{
+			content:"";
+			position:absolute;
+			bottom:0;
+			width:40px;
+			height:2px;
+			left:50%;
+			background:#fb6e14;
+			margin-left:-20px;
+		}
+		.yummy-heading .sub-heading{
+			font-size:20px;
+			line-height:1.5;
+			margin-bottom:30px;
+		}
+		@media screen and (max-width:768px){
+			.yummy-heading .sub-heading{
+				font-size:18px;
+			}
+		}
+		#yummy-about{
+			display:-webkit-box;
+			display:-moz-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+			flex-wrap:wrap;
+			-webkit-flex-wrap:wrap;
+			-moz-flex-wrap:wrap;
+			background:#e6e6e6;
+			width:100%;
+		}
+		#yummy-about .yummy-2col{
+			width:50%;
+		}
+		@media screen and (max-width:1200px){
+			#yummy-about .yummy-2col{
+				width:100%;
+			}
+		}
+		#yummy-about .yummy-text{
+			padding:2em 6em;
+			text-align:left;
+			background:#130d08 url(images/wood_1.png) repeat;
+		}
+		@media screen and (max-width:1200px){
+			#yummy-about .yummy-text{
+				padding:1em;
+			}
+		}
+		#yummy-about .yummy-text .btn{
+			color:#fff;
+		}
+		
+		#yummy-about .yummy-text .heading{
+			margin-bottom:30px;
+			color:#fff;
+			font-style:italic;
+			font-weight:300;
+			position:relative;
+			padding-bottom:30px;
+			text-align:center;
+			font-family: 'Gupter', serif;
+			padding-top:50px !important;
+		}
+		#yummy-about .yummy-text .heading:after{
+			content:"";
+			position:absolute;
+			bottom:0;
+			width:40px;
+			height:2px;
+			left:50%;
+			background:#fb6e14;
+			margin-left:-20px;
+		}
+		#yummy-about .yummy-text p{
+			line-height:2;
+			color:#a99c92;
+		}
+		#yummy-about .yummy-text p span.firstcharacter{
+			float:left;
+			color:#903;
+			font-size:75px;
+			line-height:60px;
+			padding-top:4px;
+			padding-right:10px;
+			padding-left:3px;
+			font-style:italic;
+			top:-20px;
+			position:relative;
+			color:#fff;
+			font-family:serif;
+		}
+		#yummy-about .yummy-bg{
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+		@media screen and (max-width:1200px){
+			#yummy-about .yummy-bg{
+				width:100%;
+				min-height:300px;
+			}
+		}
+		#carouselContent{
+			padding:7em 3em;
+		}
+		@media screen and (max-width:768px){
+			#carouselContent{
+				padding:5em 0;
+			}
+		}
+		#carouselContent blockquote{
+			font-size:40px;
+			line-height:1.5;
+			padding-left:0;
+			border-left:none;
+		}
+		#carouselContent blockquote p.quote-author{
+			font-size:20px;
+			color:gray;
+		}
+		@media screen and (max-width:768px){
+			#carouselContent blockquote{
+				padding:0 20px;
+			}
+			#carouselContent blockquote p{
+				font-size:20px;
+				line-height:1.5;
+			}
+			#carouselContent blockquote p.quote-author{
+				font-size:18px;
+			}
+			#yummy-featured{
+				padding:5em 0;
+			}
+		}
+		#yummy-featured{
+			padding:7em 0;
+			background:#130d08 url(images/wood_1.png) repeat;
+		}
+		#yummy-featured .yummy-heading .heading{
+			position:relative;
+			padding-top:30px !important;
+			color:#fff;
+		}
+		#yummy-featured .yummy-heading .heading:before,
+		#yummy-featured .yummy-heading .heading::before{
+			height:64px;
+			width:64px;
+			content:"";
+			position:absolute;
+			background:url(images/0103-served-plate_64.png) no-repeat;
+			top:0;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-32px;
+		}
+		#yummy-featured .yummy-heading .sub-heading{
+			color:#a99c92;
+		}
+		#yummy-featured .yummy-grid{
+			display:-webkit-box;
+			display:-moz-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+			flex-wrap:wrap;
+			-webkit-flex-wrap:wrap;
+			-moz-flex-wrap:wrap;
+		}
+		#yummy-featured .yummy-grid h2{
+			font-size:20px;
+			margin-bottom:0;
+		}
+		#yummy-featured .yummy-grid p{
+			line-height:1.6;
+			font-size:16px;
+			color:#222;
+		}
+		#yummy-featured .yummy-grid .pricing{
+			font-size:40px;
+			display:block;
+			padding-top:20px;
+		}
+		#yummy-featured .yummy-grid .pricing:after{
+			content:"";
+			position:absolute;
+			width:40px;
+			height:2px;
+			left:50%;
+			margin-left:-20px;
+			background:#fb6e14;
+		}
+		#yummy-featured .yummy-grid .arrow-left:before,
+		#yummy-featured .yummy-grid .arrow-left::before{
+			content:"";
+			position:absolute;
+			z-index:999;
+			top:50px;
+			left:0;
+			margin-left:-15px;
+			width:0;
+			height:0;
+			border-top:15px solid transparent;
+			border-bottom:15px solid transparent;
+			border-right:15px solid #f5f5f5;
+		}
+		
+		#yummy-featured .yummy-grid .arrow-right:before,
+		#yummy-featured .yummy-grid .arrow-right::before{
+			content:"";
+			position:absolute;
+			z-index:999;
+			top:50px;
+			right:0;
+			margin-right:-15px;
+			width:0;
+			height:0;
+			border-top:15px solid transparent;
+			border-bottom:15px solid transparent;
+			border-left:15px solid #f5f5f5;
+		}
+		@media screen and (max-width:992px){
+			#yummy-featured .yummy-grid .arrow-right:before,
+			#yummy-featured .yummy-grid .arrow-right::before{
+				right:auto !important;
+				left:0 !important;
+				margin-left:-15px !important;
+				border-left:none !important;
+				border-right:15px solid #f5f5f5 !important;
+			}
+		}
+		@media screen and (max-width:768px){
+			#yummy-featured .yummy-grid .arrow-right:before,
+			#yummy-featured .yummy-grid .arrow-right::before,
+			#yummy-featured .yummy-grid .arrow-left:before,
+			#yummy-featured .yummy-grid .arrow-left::before{
+				right:auto !important;
+				left:15px !important;
+				top:0 !important;
+				margin-top:-15px !important;
+				margin-left:0px !important;
+				border-top:none !important;
+				border-left:15px solid transparent !important;
+				border-right:15px solid transparent !important;
+				border-bottom:15px solid #f5f5f5 !important;
+			}
+		}
+		
+		#yummy-featured .yummy-grid > .yummy-v-half{
+			width:50%;
+			text-align:center;
+			position:relative;
+			display:-webkit-box;
+			display:-moz-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+			flex-wrap:wrap;
+			-webkit-flex-wrap:wrap;
+			-moz-flex-wrap:wrap;
+		}
+		@media screen and (max-width:992px){
+			#yummy-featured .yummy-grid > .yummy-v-half{
+				width:100%;
+			}
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half .yummy-text{
+			background:#f5f5f5;
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half .yummy-special-1{
+			background:#faebcd;
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half .yummy-special-1.arrow-left:before,
+		#yummy-featured .yummy-grid > .yummy-v-half .yummy-special-1.arrow-left::before{
+			border-right:15px solid #faebcd;
+		}
+		@media screen and (max-width:768px){
+			#yummy-featured .yummy-grid > .yummy-v-half .yummy-special-1.arrow-left:before,
+			#yummy-featured .yummy-grid > .yummy-v-half .yummy-special-1.arrow-left::before{
+				border-left:15px solid transparent !important;
+				border-right:15px solid transparent !important;
+				border-bottom:15px solid #faebcd !important;
+			}
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half > .yummy-v-col-2{
+			width:50%;
+			padding:20px;
+			position:relative;
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half > .yummy-v-col-2.yummy-bg-img{
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-position:center center;
+		}
+		
+		#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2{
+			width:100%;
+			position:relative;
+			display:-webkit-box;
+			display:-moz-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+			flex-wrap:wrap;
+			-webkit-flex-wrap:wrap;
+			-moz-flex-wrap:wrap;
+		}
+		@media screen and (max-width:768px){
+			#yummy-featured .yummy-grid > .yummy-v-half > .yummy-v-col-2.yummy-bg-img,
+			#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2 > .yummy-v-col-2.yummy-bg-img{
+				height:200px;
+			}
+			#yummy-featured .yummy-grid > .yummy-v-half > .yummy-v-col-2{
+				width:100%;
+			}
+			
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2 > .yummy-v-col-2{
+			width:50%;
+			position:relative;
+			padding:20px;
+		}
+		@media screen and (max-width:768px){
+			#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2 > .yummy-v-col-2{
+				width:100%;
+			}
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2 > .yummy-v-col-2.yummy-bg-img{
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-position:center center;
+		}
+		#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2.yummy-reversed .yummy-bg-img{
+			position:absolute;
+			right:0;
+			bottom:0;
+			top:0;
+		}
+		@media screen and (max-width:992px){
+			#yummy-featured .yummy-grid > .yummy-v-half > .yummy-h-row-2.yummy-reversed .yummy-bg-img{
+				position:relative;
+				right:inherit;
+				top:inherit;
+				bottom:inherit;
+			}
+		}
+		#yummy-menus{
+			padding:7em 0;
+		}
+		@media screen and (max-width:768px){
+			#yummy-menus{
+				padding:5em 0;
+			}
+		}
+		#yummy-menus .yummy-heading .heading{
+			position:relative;
+			padding-top:30px !important;
+		}
+		#yummy-menus .yummy-heading .heading:before,
+		#yummy-menus .yummy-heading .heading::before{
+			height:64px;
+			width:64px;
+			position:absolute;
+			content:"";
+			background:url(images/vegan.png) no-repeat;
+			top:0;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-32px;
+		}
+		#yummy-menus .yummy-heading .sub-heading{
+			color:#a99c92;
+		}
+		#yummy-menus .yummy-food-menu{
+			float:left;
+			width:100%;
+			margin-bottom:30px;
+		}
+		@media screen and (max-width:768px){
+			#yummy-menus .yummy-food-menu{
+				clear:none !important;
+			}
+		}
+		#yummy-menus .yummy-food-menu h2{
+			margin-bottom:50px;
+			font-style:italic;
+			position:relative;
+		}
+		#yummy-menus .yummy-food-menu h2.yummy-drinks{
+			padding-left:80px;
+		}
+		#yummy-menus .yummy-food-menu h2.yummy-drinks:before{
+			background:url(images/vegan.png) no-repeat;
+			content:"";
+			position:absolute;
+			top:0;
+			left:0;
+			width:64px;
+			height:45px;
+		}
+		#yummy-menus .yummy-food-menu h2.yummy-dishes{
+			padding-left:80px;
+		}
+		#yummy-menus .yummy-food-menu h2.yummy-dishes:before{
+			background:url(images/vegan.png) no-repeat;
+			content:"";
+			position:absolute;
+			top:0;
+			left:0;
+			width:64px;
+			height:45px;
+		}
+		#yummy-menus .yummy-food-menu ul{
+			padding:0;
+			margin:0;
+		}
+		#yummy-menus .yummy-food-menu ul li{
+			padding:0 0 20px 0;
+			margin:0 0 20px 0;
+			border-bottom:1px dotted #ccc;
+			display:block;
+			float:left;
+			width:100%;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-desc{
+			clear:both;
+			float:left;
+			width:80%;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-desc > figure{
+			width:20%;
+			float:left;
+			position:relative;
+			margin-right:4%;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-desc > figure img{
+			max-width:100%;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			-ms-border-radius:4px;
+			border-radius:4px;
+			margin-bottom:0;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-desc > div{
+			width:75%;
+			float:left;
+			position:relative;
+			font-size:14px;
+			line-height:1.5;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-desc > div p{
+			margin:0;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-desc > div h3{
+			margin:0 0 10px 0;
+			padding:0;
+			font-size:20px;
+			color:#000;
+		}
+		#yummy-menus .yummy-food-menu ul li .yummy-food-pricing{
+			float:right;
+			width:20%;
+			text-align:right;
+			font-size:20px;
+			color:#fb6e14;
+		}
+		#yummy-events{
+			padding:7em 0;
+			background-color:transparent;
+			background-size:cover;
+			background-attachment:fixed;
+			position:relative;
+		}
+		#yummy-events > .yummy-overlay{
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			background:rgba(0,0,0,0.7);
+			z-index:9;
+		}
+		#yummy-events > .container{
+			z-index:10;
+			position:relative;
+		}
+		#yummy-events .yummy-heading .heading{
+			position:relative;
+			padding-top:30px !important;
+			color:#fff;
+		}
+		#yummy-events .yummy-heading .heading:before,
+		#yummy-events .yummy-heading .heading::before{
+			height:64px;
+			width:49px;
+			position:absolute;
+			content:"";
+			background:url("images/0402-chef.png") no-repeat;
+			top:0;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-24px;
+		}
+		#yummy-events .yummy-heading .sub-heading{
+			color:#a99c92;
+		}
+		
+		#yummy-events .yummy-event{
+			background:#fff;
+			padding:30px 20px;
+			text-align:center;
+			margin-bottom:30px;
+			position:relative;
+		}
+		#yummy-events .yummy-event:before{
+			border:2px solid #e6e6e6;
+			content:"";
+			position:absolute;
+			top:15px;
+			bottom:15px;
+			right:15px;
+			left:15px;
+			z-index:0;
+		}
+		#yummy-events .yummy-event h3,
+		#yummy-events .yummy-event .yummy-event-meta,
+		#yummy-events .yummy-event p,
+		#yummy-events .yummy-event .btn{
+			position:relative;
+			z-index:2;
+		}
+		#yummy-events .yummy-event h3{
+			padding:0;
+			margin:0;
+		}
+		#yummy-events .yummy-event .yummy-event-meta{
+			margin-bottom:20px;
+			display:block;
+			color:gray;
+			position:relative;
+			padding-bottom:10px;
+		}
+		#yummy-events .yummy-event .yummy-event-meta:after,
+		#yummy-events .yummy-event .yummy-event-meta::after{
+			background:#fb6e14;
+			content:"";
+			position:absolute;
+			left:50%;
+			bottom:0;
+			width:40px;
+			height:2px;
+			margin-left:-20px;
+		}
+		#yummy-events .yummy-event p{
+			font-size:14px;
+			line-height:1.2;
+		}
+		#yummy-events .yummy-event p:last-child{
+			margin-bottom:0;
+		}
+		#yummy-events .yummy-event .btn{
+			margin-bottom:0;
+		}
+		#yummy-contact{
+			padding:7em 0;
+		}
+		@media screen and (max-width:768px){
+			#yummy-contact{
+				padding:5em 0;
+			}
+		}
+		#yummy-contact h3{
+			margin-bottom:30px;
+			font-style:italic;
+		}
+		#yummy-contact .yummy-heading .heading{
+			position:relative;
+			padding-top:30px !important;
+		}
+		#yummy-contact .yummy-heading .heading:before,
+		#yummy-contact .yummy-heading .heading::before{
+			height:61px;
+			width:61px;
+			position:absolute;
+			content:"";
+			background:url(images/0203-coffee-love.png) no-repeat;
+			top:0;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-24px;
+		}
+		#yummy-contact .yummy-heading .sub-heading{
+			color:#a99c92;
+		}
+		#yummy-contact .yummy-contact-info{
+			padding:0;
+			margin:0 0 1.5em 0;
+		}
+		#yummy-contact .yummy-contact-info li{
+			position:relative;
+			padding:0;
+			margin:0 0 1.5em 0;
+			padding-left:50px;
+			list-style:none;
+		}
+		#yummy-contact .yummy-contact-info li i{
+			position:absolute;
+			top:0.4em;
+			left:0;
+		}
+		#yummy-container{
+			position:relative;
+			z-index:10;
+		}
+		#yummy-footer{
+			width:100%;
+			background:rgba(0,0,0,0.9);
+			padding:7em 0;
+			z-index:1;
+			font-size:14px;
+			line-height:1.5;
+			color:rgba(255,255,255,0.5);
+		}
+		@media screen and (max-width:768px){
+			#yummy-footer{
+				padding:5em 0;
+			}
+		}
+		@media screen and (max-width:480px){
+			#yummy-footer{
+				height:inherit;
+				position:relative;
+			}
+		}
+		.yummy-social{
+			padding:0;
+			margin:0;
+		}
+		.yummy-social li{
+			padding:0;
+			margin:0;
+			list-style:none;
+			display:inline;
+		}
+		.yummy-social li a{
+			font-size:30px;
+			padding:10px;
+		}
+		.yummy-social li a i{
+			font-size:30px;
+		}
+		.yummy-social li a:hover,
+		.yummy-social li a:active,
+		.yummy-social li a:focus{
+			outline:none;
+			text-decoration:none;
+		}
+		#yummy-type{
+			padding:7em 0;
+			background-color:transparent;
+			background-size:cover;
+			background-attachment:fixed;
+			position:relative;
+		}
+		#yummy-type > .yummy-overlay{
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			background:rgba(0,0,0,0.7);
+			z-index:9;
+		}
+		#yummy-type > .container{
+			z-index:10;
+			position:relative;
+		}
+		#yummy-type .yummy-type{
+			float:left;
+			width:100%;
+			text-align:center;
+		}
+		@media screen and (max-width:768px){
+			#yummy-type .yummy-type{
+				margin-bottom:30px;
+			}
+		}
+		#yummy-type h3{
+			margin-bottom:30px;
+			font-style:italic;
+			color:#fff;
+			font-size:40px;
+			text-align:center;
+			padding-top:110px;
+		}
+		#yummy-type h3.with-icon{
+			position:relative;
+		}
+		#yummy-type h3.with-icon:before,
+		#yummy-type h3.with-icon::before{
+			content:"";
+			position:absolute;
+			left:50%;
+			margin-left:-54px;
+			margin-top:-125px;
+			width:104px;
+			height:104px;
+			border:2px solid rgba(255,255,255,0.2);
+			-webkit-border-radius:50%;
+			-moz-border-radius:50%;
+			-ms-border-radius:50%;
+			border-radius:50%;
+		}
+		#yummy-type h3.with-icon.icon-1:before,
+		#yummy-type h3.with-icon.icon-1::before{
+			background:url(images/type1.png) no-repeat center center;
+		}
+		#yummy-type h3.with-icon.icon-2:before,
+		#yummy-type h3.with-icon.icon-2::before{
+			background:url(images/type2.png) no-repeat center center;
+		}
+		#yummy-type h3.with-icon.icon-3:before,
+		#yummy-type h3.with-icon.icon-3::before{
+			background:url(images/type3.png) no-repeat center center;
+		}
+		#yummy-type h3.with-icon.icon-4:before,
+		#yummy-type h3.with-icon.icon-4::before{
+			background:url(images/type4.png) no-repeat center center;
+		}
+		#yummy-type h3.with-icon.icon-5:before,
+		#yummy-type h3.with-icon.icon-5::before{
+			background:url(images/type5.png) no-repeat center center;
+		}
+		#yummy-type h3.with-icon.icon-6:before,
+		#yummy-type h3.with-icon.icon-6::before{
+			background:url(images/type6.png) no-repeat center center;
+		}
+		#yummy-type p{
+			color:rgba(255,255,255,0.7);
+		}
+		.row-padded{
+			padding-bottom:40px;
+		}
+		/**/
+		nav span{
+		display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin: 0px;
+			color:#fff;
+			font-size:10px;
+			font-weight:1000;
+			background-color: orange;
+			text-align:center;
+			vertical-align:center;
+			line-height:50px;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+		.carousel-indicators li{
+			width:10px;
+			height:10px;
+			border-radius:100%;
+			background-color: #FF4500;
+			box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+		}
+		.carousel-indicators .active {
+			width: 10px;
+			height: 10px;
+			background-color: #CDBA96;
+		}
+		@media(max-width:991px){
+			#yummy-type .yummy-type h3,p{
+				font-size:1rem;
+			}
+		}
+		@media(max-width:600px){
+			.nav-custom a{
+				font-size:0.7rem;
+			}
+		}
+		</style>
+	</head>
+	<body>
+	<div class="yummy-container">
+		<div id="yummy-home" class="js-fullheight">
+			<div class="flexslider">
+				<div class="yummy-overlay"></div>
+				<div class="yummy-text">
+					<div class="container">
+						<div class="row">
+							<h1 class="">yummy</h1>
+							<h2 class="">Lovely Designed <span>by Hosino tukiakari</span></h2>
+						</div>
+					</div>
+				</div>
+				<div id="slides" class="carousel slide" data-ride="carousel"><!--d-block==display:block;w-100==width:100-->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="images/slide_1.jpg" alt="first slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/slide_2.jpg" alt="second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/slide_3.jpg" alt="third slide">
+						</div>
+					</div>
+				</div>	
+	
+			</div>
+		</div>
+		
+		
+		<nav class="navbar sticky-top navbar-light bg-light nav-custom">
+			<a href="#yummy-home">Home</a>
+			<a href="#yummy-about">About</a>
+			<a href="#yummy-featured">Features</a>
+			<a href="#">
+				<span class="rounded-circle">Yummy</span>
+				
+			</a>
+			<!--img src="images/bg3.jpg" alt="Logo"-->
+			<a href="#yummy-menus">Menu</a>
+			<a href="#yummy-events">Events</a>
+			<a href="#yummy-contact">Reservation</a>
+		</nav>
+		
+		<div id="yummy-about">
+			<div class="yummy-2col yummy-bg">
+				<img src="images/res_img_3.jpg" class="img-fluid" style="width:100%;height:100%;"/>
+			</div>
+			<div class="yummy-2col yummy-text">
+				<h2 class="heading ">About Us</h2>
+				<p class=""><span class="firstcharacter">当</span>店は自産自消にこだわっています。野菜の旨みに目の目覚めるような感動をもらいことが私に「健康で自然の気分を味わえる場所」としてYummyを創るきっかけを与えてくれました。
+				私達は、「食べる喜び」をキーワードとし、この地球や自然に感謝して生きる今をお食事を通じて、人々の健康・楽しさ・快適さに貢献します。
+				</p>
+				<p class="text-center "><a href="#" class="btn btn-primary btn-outline">Get in touch</a></p>
+			</div>
+		</div>
+		
+		<div id="carouselContent" class="carousel slide" data-ride="carousel">
+			<ul class="carousel-indicators">
+				<li data-target="#carouselContent" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselContent" data-slide-to="1"></li>
+				<li data-target="#carouselContent" data-slide-to="2"></li>
+				<li data-target="#carouselContent" data-slide-to="3"></li>
+			</ul>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<blockquote>
+						<p>&ldquo;The preparation of good food is merely another expression of art, one of the joys of civilized living.&rdquo;</p>
+						<p>&ldquo;美味しい料理を作ることは別の形の芸術表現であり、文明生活の喜びのひとつである。&rdquo;</p>
+						<p class="quote-author">&mdash; Dione Lucas（ディオン・ルーカス） </p>
+					</blockquote>
+				</div>
+				<div class="carousel-item">
+					<blockquote>
+						<p>&ldquo; Eat breakfast like a king, lunch like a prince, and dinner like a pauper.&rdquo;</p>
+						<p>&ldquo; 朝食は王様のように、昼食は王子様のように、そして夕食は貧乏人のように食べなさい。&rdquo;</p>
+						<p class="quote-author">&mdash; Adelle Davis（アデル・デイビス）</p>
+					</blockquote>
+				</div>
+				<div class="carousel-item">
+					<blockquote>
+						<p>&ldquo;You can tell a lot about a fellow’s character by his way of eating jellybeans.&rdquo;</p>
+						<p>&ldquo;ゼリービーンズを食べる方法によって、仲間の性格について多くのことが分かる。&rdquo;</p>
+						<p class="quote-author">&mdash; Ronald Reagan（ロナルド・レーガン）</p>
+					</blockquote>
+				</div>
+				<div class="carousel-item">
+					<blockquote>
+						<p>&ldquo;If you’re a happy person around food, you can be a professional chef. It’s fueled by passion.&rdquo;</p>
+						<p>&ldquo;もしあなたが食べ物で幸せになる人であれば、プロの料理人になることができる。それは情熱によって刺激されるんだ。&rdquo;</p>
+						<p class="quote-author">&mdash; Ranveer Brar（ランヴィール・ブラル）</p>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	
+
+		<div id="yummy-featured">
+			<div class="container">
+				<div class="row text-center yummy-heading row-padded">
+					<div class="col-md-12"><!--col-md-offset-2表示该列向右偏移2个列的宽度-->
+						<h2 class="heading">Featured Dishes</h2>
+						<p class="sub-heading">今日のおすすめ</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="yummy-grid">
+						<div class="yummy-v-half ">
+							<div class="yummy-v-col-2 yummy-bg-img" style="background-image:url(images/chaofan.jpg)">
+							</div>
+							<div class="yummy-v-col-2 yummy-text yummy-special-1 arrow-left">
+								<h2>Soy Sauce Fried Rice</h2>
+								<span class="pricing">￥1500</span>
+								<p>醤油チャーハン</p>
+							</div>
+						</div>
+						<div class="yummy-v-half">
+							<div class="yummy-h-row-2 ">
+								<div class="yummy-v-col-2 yummy-bg-img" style="background-image:url(images/jiaozi.jpg)"></div>
+								<div class="yummy-v-col-2 yummy-text arrow-left">
+									<h2>Willow Leaves Steamed Jiaozi</h2>
+									<span class="pricing">￥800</span>
+									<p>柳葉蒸し餃子</p>
+								</div>
+							</div>
+							<div class="yummy-h-row-2 yummy-reversed ">
+								<div class="yummy-v-col-2 yummy-bg-img" style="background-image:url(images/mazerice.jpg)"></div>
+								<div class="yummy-v-col-2 yummy-text arrow-right">
+									<h2>Gomoku Mixed Rice</h2>
+									<span class="pricing">￥1000</span>
+									<p>五目混ぜご飯</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="yummy-v-half">
+							<div class="yummy-h-row-2 yummy-reversed ">
+								<div class="yummy-v-col-2 yummy-bg-img" style="background-image:url(images/kimuti.jpg)"></div>
+								<div class="yummy-v-col-2 yummy-text arrow-right">
+									<h2>Chili Sauce Kimchi</h2>
+									<span class="pricing">￥600</span>
+									<p>チリソースキムチ</p>
+								</div>
+							</div>
+							<div class="yummy-h-row-2 ">
+								<div class="yummy-v-col-2 yummy-bg-img" style="background-image:url(images/chaomian.jpg)"></div>
+								<div class="yummy-v-col-2 yummy-text arrow-left">
+									<h2>Vegetable Croquette Pasta</h2>
+									<span class="pricing">￥1100</span>
+									<p>野菜コロッケパスタ</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="yummy-v-half ">
+							<div class="yummy-v-col-2 yummy-bg-img" style="background-image:url(images/tomatorice.jpg)"></div>
+							<div class="yummy-v-col-2 yummy-text yummy-special-1 arrow-left">
+								<h2>Tomato Fried Rice</h2>
+								<span class="pricing">￥1200</span>
+								<p>トマトチャーハン</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	<div id="yummy-type" style="background-image:url(images/slide_3.jpg);background-size:cover;background-position:center center;">
+		<div class="yummy-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 ">
+					<div class="yummy-type">
+						<h3 class="with-icon icon-1">Set Meals</h3>
+						<p>コース</p>
+					</div>
+				</div>
+				<div class="col-md-2 ">
+					<div class="yummy-type">
+						<h3 class="with-icon icon-2">A La Carte</h3>
+						<p>アラカルト</p>
+					</div>
+				</div>
+				<div class="col-md-2 ">
+					<div class="yummy-type">
+						<h3 class="with-icon icon-3">Salad</h3>
+						<p>サラダ</p>
+					</div>
+				</div>
+				<div class="col-md-2 ">
+					<div class="yummy-type">
+						<h3 class="with-icon icon-4">Soup</h3>
+						<p>スープ</p>
+					</div>
+				</div>
+				<div class="col-md-2 ">
+					<div class="yummy-type">
+						<h3 class="with-icon icon-5">Desserts</h3>
+						<p>デザート</p>
+					</div>
+				</div>
+				<div class="col-md-2 ">
+					<div class="yummy-type">
+						<h3 class="with-icon icon-6">Drinks</h3>
+						<p>ドリンク</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="yummy-menus">
+		<div class="container">
+			<div class="row text-center yummy-heading row-padded">
+				<div class="col-md-12">
+					<h2 class="heading ">Food Menu</h2>
+					<p class="sub-heading ">フードメニュー</p>
+				</div>
+			</div>
+			<div class="row row-padded">
+				<div class="col-md-6">
+					<div class="yummy-food-menu ">
+						<h2 class="yummy-drinks">Set meals</h2>
+						<ul>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/chaofan.jpg" class="img-fluid" alt="menu">
+									</figure>
+									<div>
+										<h3>Soy Sauce Fried Rice</h3>
+										<p>醤油チャーハン</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥1500</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/mazerice.jpg" class="img-fluid" alt="menu">
+									</figure>
+									<div>
+										<h3>Gomoku Mixed Rice</h3>
+										<p>五目混ぜご飯</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥1000</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/chaomian.jpg" class="img-fluid" alt="menu">
+									</figure>
+									<div>
+										<h3>Vegetable Croquette Pasta</h3>
+										<p>野菜コロッケパスタ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥1100</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/tomatorice.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Tomato Fried Rice</h3>
+										<p>トマトチャーハン</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥1200</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="yummy-food-menu ">
+						<h2 class="yummy-dishes">A La Carte</h2>
+						<ul>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/jiaozi.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Willow Leaves Steamed Jiaozi</h3>
+										<p>柳葉蒸し餃子</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥800</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/qiezi.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Fried Kidney Beans Eggplant</h3>
+										<p>インゲン豆茄子炒め</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥900</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/spring-rolls.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Gomoku Spring Rolls</h3>
+										<p>五目春巻</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥600</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/kimuti.jpg" class="img-fluid" alt="menu" />
+									</figure>
+									<div>
+										<h3>Chili Sauce Kimchi</h3>
+										<p>チリソースキムチ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥600</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				
+				<div class="col-md-6">
+					<div class="yummy-food-menu ">
+						<h2 class="yummy-drinks">Salad</h2>
+						<ul>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/res_img_3.jpg" class="img-fluid" alt="menu">
+									</figure>
+									<div>
+										<h3>Mixed Vegetable Salad</h3>
+										<p>ミックス野菜サラダ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥550</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/res_img_7.jpg" class="img-fluid" alt="menu">
+									</figure>
+									<div>
+										<h3>Mixed Fruit Salad</h3>
+										<p>ミックスフルーツサラダ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥500</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/res_img_1.jpg" class="img-fluid" alt="menu">
+									</figure>
+									<div>
+										<h3>Mixed Nuts Salad</h3>
+										<p>ミックスナッツサラダ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥450</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="yummy-food-menu ">
+						<h2 class="yummy-dishes">Soup</h2>
+						<ul>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/pumpkin-soup.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Pumpkin Soup</h3>
+										<p>かぼちゃスープ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥500</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/hourensou.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Spinach Soup</h3>
+										<p>ほうれん草スープ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥600</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/tomato-soup.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Tomato Soup</h3>
+										<p>トマトスープ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥700</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="yummy-food-menu ">
+						<h2 class="yummy-dishes">Desserts</h2>
+						<ul>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/sakura.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Sakura Mochi</h3>
+										<p>桜餅</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥300</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/mocha.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Matcha Syrup Cake</h3>
+										<p>抹茶シロップケーキ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥350</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/walnut.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Walnut Cake</h3>
+										<p>くるみケーキ</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥360</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/cookie.jpg" class="img-fluid" alt="menu" />
+									</figure>
+									<div>
+										<h3>Almond Cookie</h3>
+										<p>アーモンドクッキー</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥370</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="yummy-food-menu ">
+						<h2 class="yummy-dishes">Drinks</h2>
+						<ul>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/res_img_4.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Fruit Smoothie</h3>
+										<p>フルーツスムージー</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥600</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/res_img_8.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Vegetable Juice</h3>
+										<p>野菜ジュース</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥660</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/puertea.jpg" class="img-fluid" alt="menu"/>
+									</figure>
+									<div>
+										<h3>Puercha</h3>
+										<p>プーアル茶</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥800</div>
+							</li>
+							<li>
+								<div class="yummy-food-desc">
+									<figure>
+										<img src="images/ulongcha.jpg" class="img-fluid" alt="menu" />
+									</figure>
+									<div>
+										<h3>Oolong tea</h3>
+										<p>ウーロン茶</p>
+									</div>
+								</div>
+								<div class="yummy-food-pricing">￥700</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center ">
+					<p><a href="#" class="btn btn-primary btn-outline">More Food Menu</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="yummy-events" style="background-image:url(images/slide_2.jpg);background-size:cover;background-position:center center;">
+		<div class="yummy-overlay"></div>
+		<div class="container">
+			<div class="row text-center yummy-heading row-padded">
+				<div class="col-md-12 col-xs-12 col-sm-12">
+					<h2 class="heading">Upcoming Events</h2>
+					<p class="sub-heading">今月のイベント</p>
+				</div>
+			</div>
+						<div class="container">
+					<div class="row">
+				<div class="col-md-4 col-xs-12 col-sm-12">
+					<div class="yummy-event">
+						<h3>Kitchen Workshop&nbsp;</h3>
+						<span class="yummy-event-meta">December 14th, 2019</span>
+						<p>キッチンワークショップ<br/><br/>開催日時:13:00～17:00<br/><br/>開催場所:当店2F</p>
+						<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-sm-12">
+					<div class="yummy-event">
+						<h3>Beethoven Concert</h3>
+						<span class="yummy-event-meta">December 21st, 2019</span>
+						<p>ベートーヴェンのコンサート<br/><br/>開催日時:17:00～20:00<br/><br/>開催場所:当店5F</p>
+						<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 col-sm-12">
+					<div class="yummy-event">
+						<h3>Free to Eat Party</h3>
+						<span class="yummy-event-meta">December 28th, 2019</span>
+						<p>食べ放題パーティー<br/><br/>開催日時:9:00～18:00<br/><br/>開催場所:当店1F</p>
+						<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			</div>
+		</div>		
+	</div>
+	
+	
+	<div id="yummy-contact">
+		<div class="container">
+			<div class="row text-center yummy-heading row-padded">
+				<div class="col-md-12">
+					<h2 class="heading ">Reserve a Table</h2>
+					<p class="sub-heading ">ご予約</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6 ">
+					<h3>Contact Info</h3>
+					<ul class="yummy-contact-info">
+						<li class="yummy-contact-address">
+							<i class="fas fa-home"></i>
+							東京都千代田区丸の内３−２−１
+						</li>
+						<li><i class="fas fa-subway"></i>「有楽町駅」国際フォーラム口より徒歩5分</li>
+						<li><i class="far fa-clock"></i>9:00 - 21:00</li>
+						<li><i class="fas fa-phone"></i>(81)465-6789</li>
+						<li><i class="fas fa-envelope"></i>info@yummy.jp</li>
+						<li><i class="fas fa-globe"></i><a href="#">www.yummy-re.com</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 ">
+					<h3>Reserve Form</h3>
+					<div class="form-group">
+						<label for="name" class="sr-only">名前</label>
+						<input id="name" class="form-control" placeholder="お名前" type="text"/>
+					</div>
+					<div class="form-group">
+						<label for="email" class="sr-only">メールアドレス</label>
+						<input id="email" class="form-control" placeholder="メールアドレス" type="email"/>
+					</div>
+					<div class="form-group">
+						<label for="occasion" class="sr-only">祝い事</label>
+						<select class="form-control" id="occasion">
+							<option>予約の種類</option>
+							<option>通常の予約</option>
+							<option>結婚式</option>
+							<option>誕生日</option>
+							<option>その他</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+							<input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+							<div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+								<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="message" class="sr-only">Message</label>
+						<textarea id="message" cols="30" rows="5" class="form-control" placeholder="メッセージ"></textarea>
+					</div>
+					<div class="form-group">
+						<input class="btn btn-primary" value="Send Message" type="submit"/>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	<div id="yummy-footer">
+		<div class="container">
+			<div class="row row-padded">
+				<div class="col-md-12 text-center">
+					<p class="">&copy; 2020 All rights reserved | Design by Hosino tukiakari</p>
+					<p class="text-center "><a href="#" class="js-gotop">Go To Top</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="yummy-social">
+						<li class=""><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+						<li class=""><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li class=""><a href="#"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	$(function(){
+		$('#datetimepicker1').datetimepicker({
+			locale:'ja';
+		}); 
+	});
+	</script>
+	</body>
+</html>
