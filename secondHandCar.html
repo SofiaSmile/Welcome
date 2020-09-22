@@ -89,8 +89,6 @@ body,td,th {
 </style>
 
 <script type="text/javascript">
-// =============================================================
-
 var m3D = function () {
 	/* ---- private vars ---- */
 	var diapo = [],
@@ -99,7 +97,7 @@ var m3D = function () {
 		bar,
 		selected,
 		urlInfo,
-		imagesPath = "image2/",
+		imagesPath = "../image2/",
 		camera = {x:0, y:0, z:-650, s:0, fov: 500},
 		nw = 0,
 		nh = 0;
@@ -211,7 +209,7 @@ var m3D = function () {
 			var h = this.h * p;
 			/* ---- HTML rendering ---- */
 			this.css.left   = Math.round(nw + x * p - w * .5) + 'px';
-			this.css.top    = Math.round(nh + y * p - h * .5) + 'px';  
+			this.css.top    = Math.round(nh + y * p - h * .5) + 'px';
 			this.css.width  = Math.round(w) + 'px';
 			this.css.height = Math.round(h) + 'px';
 			this.css.zIndex = this.zi - Math.round(z);
@@ -266,7 +264,7 @@ var m3D = function () {
 		urlInfo = document.getElementById("urlInfo");
 		resize();
 		/* ---- loading images ---- */
-		var i = 0, 
+		var i = 0,
 		    o,
 			n = data.length;
 		while( o = data[i++] ) {
@@ -296,7 +294,7 @@ var m3D = function () {
 			if (!m) camera.tx = 0;
 		/* ---- y axis move ---- */
 		} else if (camera.ty) {
-			if (!camera.s) camera.setTarget(camera.y, camera.ty); 
+			if (!camera.s) camera.setTarget(camera.y, camera.ty);
 			var m = camera.tween('y');
 			if (!m) camera.ty = 0;
 		/* ---- z axis move ---- */
