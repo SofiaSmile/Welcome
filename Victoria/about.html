@@ -1,0 +1,404 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<title>About Me</title>
+		<!--bootstrap.min.css-->
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+		<link href="style.css" type="text/css" rel="stylesheet" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+	<style>
+		.about-right{
+			padding-left:1em;
+		}
+		.about-right h3{
+			font-size:2.5em;
+			color:#999;
+		}
+		.about-right h3 span{
+			color:#4378ff;
+		}
+		.about-right h4{
+			font-size:1.1em;
+			color:#a5a5a5;
+			margin-top:1em;
+			letter-spacing:2px;
+		}
+		.about-left img{
+			border:20px solid #eee;
+		}
+		.address{
+			margin-top:1.5em;
+			border-top:1px dashed rgba(96,125,139,0.38);
+			padding-top:0.5em;
+		}
+		b{
+			letter-spacing:3px;
+		}
+		.j-address-text{
+			color:#000;
+			margin-top:1.5em;
+			
+		}
+		
+		.about-text{
+			padding:3em 1em 0;
+		}
+		p,h6{
+			font-size:1em;
+			color:#999;
+			color:rgba(0,0,0,0.9);
+			line-height:2em;
+			font-weight:400;
+			letter-spacing:1px;
+		}
+		.about-text p:first-letter{
+			font-size:6em;
+			color:#fff;
+			background:#4378ff;
+			float:left;
+			padding:0.4em 0.3em 0.5em;
+			margin-right:0.3em;
+			margin-top:0.1em;
+			font-family:'Playfair Display',serif;
+			-webkit-box-shadow:0 0 15px 1px #999;
+			-moz-box-shadow:0 0 15px 1px #999;
+			-o-box-shadow:0 0 15px 1px #999;
+			-ms-box-shadow:0 0 15px 1px #999;
+			box-shadow:0 0 15px 1px #999;
+		}
+
+		.hire-blgrids{
+			margin-top:2.5em;
+		}
+		a.wthree-more{
+			padding:0em 1em;
+			border:1px solid #4378ff;
+			font-size:1em;
+			color:#4378ff;
+			text-decoration:none;
+			display:inline-block;
+			text-transform:uppercase;
+			vertical-align:middle;
+			position:relative;
+			z-index:1;
+			overflow:hidden;
+			text-align:center;
+			letter-spacing:1px;
+		}
+		a.wthree-more.bmore1{
+			margin-left:1.5em;
+		}
+		a.wthree-more > span{
+			display:inline-block;
+			padding:1em 0;
+			vertical-align:middle;
+			opacity:0;
+			color:#fff;
+			-webkit-transform:translate3d(0,-10px,0);
+			-moz-transform:translate3d(0,-10px,0);
+			-o-transform:translate3d(0,-10px,0);
+			-ms-transform:translate3d(0,-10px,0);
+			transform:translate3d(0,-10px,0);
+			-webkit-transition:-webkit-transform 0.3s,opacity 0.3s;
+			-moz-transition:-moz-transform 0.3s,opacity 0.3s;
+			-o-transition:-o-transform 0.3s,opacity 0.3s;
+			transition:transform 0.3s,opacity 0.3s;
+			-webkit-transition-timing-function:cubic-bezier(0.75,0,0.125,1);
+			transition-timing-function:cubic-bezier(0.75,0,0.125,1);
+		}
+		a.wthree-more::before{
+			content:attr(data-text);
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			padding:1em 0;
+			-webkit-transition:-webkit-transform 0.3s,opacity 0.3s;
+			-moz-transition:-moz-transform 0.3s,opacity 0.3s;
+			-o-transition:-o-transform 0.3s,opacity 0.3s;
+			transition:transform 0.3s,opacity 0.3s;
+			-webkit-transition-timing-function:cubic-bezier(0.75,0,0.125,1);
+			transition-timing-function:cubic-bezier(0.75,0,0.125,1);
+		}
+		a.wthree-more:hover{
+			background-color:#4378ff;
+		}
+		a.wthree-more:hover::before{
+			opacity:0;
+			-webkit-transform:translate3d(0,100%,0);
+			-moz-transform:translate3d(0,100%,0);
+			-o-transform:translate3d(0,100%,0);
+			-ms-transform:translate3d(0,100%,0);
+			transform:translate3d(0,100%,0);
+		}
+		a.wthree-more:hover > span{
+			opacity:1;
+			-webkit-transform:translate3d(0,0,0);
+			-moz-transform:translate3d(0,0,0);
+			-o-transform:translate3d(0,0,0);
+			-ms-transform:translate3d(0,0,0);
+			transform:translate3d(0,0,0);
+		}
+		a.wthree-more:hover > span:nth-child(1){
+			-webkit-transition-delay:0.045s;
+			-moz-transition-delay:0.045s;
+			-o-transition-delay:0.045s;
+			-ms-transition-delay:0.045s;
+			transition-delay:0.045s;
+		}
+		a.wthree-more:hover > span:nth-child(2){
+			-webkit-transition-delay:0.09s;
+			-moz-transition-delay:0.09s;
+			-o-transition-delay:0.09s;
+			-ms-transition-delay:0.09s;
+			transition-delay:0.09s;
+		}
+		a.wthree-more:hover > span:nth-child(3){
+			-webkit-transition-delay:0.135s;
+			-moz-transition-delay:0.135s;
+			-o-transition-delay:0.135s;
+			-ms-transition-delay:0.135s;
+			transition-delay:0.135s;
+		}
+		a.wthree-more:hover > span:nth-child(4){
+			-webkit-transition-delay:0.18s;
+			-moz-transition-delay:0.18s;
+			-o-transition-delay:0.18s;
+			-ms-transition-delay:0.18s;
+			transition-delay:0.18s;
+		}
+		a.wthree-more:hover > span:nth-child(5){
+			-webkit-transition-delay:0.225s;
+			-moz-transition-delay:0.225s;
+			-o-transition-delay:0.225s;
+			-ms-transition-delay:0.225s;
+			transition-delay:0.225s;
+		}
+		a.wthree-more:hover > span:nth-child(6){
+			-webkit-transition-delay:0.27s;
+			-moz-transition-delay:0.27s;
+			-o-transition-delay:0.27s;
+			-ms-transition-delay:0.27s;
+			transition-delay:0.27s;
+		}
+		a.wthree-more:hover > span:nth-child(7){
+			-webkit-transition-delay:0.315s;
+			-moz-transition-delay:0.315s;
+			-o-transition-delay:0.315s;
+			-ms-transition-delay:0.315s;
+			transition-delay:0.315s;
+		}
+		a.wthree-more:hover > span:nth-child(8){
+			-webkit-transition-delay:0.36s;
+			-moz-transition-delay:0.36s;
+			-o-transition-delay:0.36s;
+			-ms-transition-delay:0.36s;
+			transition-delay:0.36s;
+		}
+		a.wthree-more:hover > span:nth-child(9){
+			-webkit-transition-delay:0.405s;
+			-moz-transition-delay:0.405s;
+			-o-transition-delay:0.405s;
+			-ms-transition-delay:0.405s;
+			transition-delay:0.405s;
+		}
+		a.wthree-more:hover > span:nth-child(10){
+			-webkit-transition-delay:0.45s;
+			-moz-transition-delay:0.45s;
+			-o-transition-delay:0.45s;
+			-ms-transition-delay:0.45s;
+			transition-delay:0.45s;
+		}
+		p,blockquote,.j-address-text,h6{
+			color:#666;
+		}
+		h6,blockquote{
+			font-family: 'Kosugi Maru', sans-serif;
+		}
+		@media screen and (max-width:600px){
+			a.wthree-more{
+				margin-bottom:1em;
+				width:100%;
+			}
+			a.bmore1{
+				width:100%;
+			}
+			a.wthree-more.bmore1{
+				margin-left:0;
+			}
+			
+		}
+		@media screen and (max-width:400px){
+			.j-address-text,.about-right h3,
+			.about-right h4{
+				margin-left:50px;
+			}
+			.hire-blgrids{
+				margin-left:20px;
+				margin-right:20px;
+			}
+		}
+	</style>
+	</head>
+	<body>
+		<!--banner-->
+		<div class="banner about-bbanner">
+			<div class="banner-cinfo">
+				<!--header-->
+				<div class="header">
+					<div class="container">
+						<div class="logo">
+							<h1><a href="#">Courage</a></h1>
+						</div>
+						<div class="menu">
+							<a href="#" class="navicon"></a>
+							<div class="toggle effect-3">
+								<ul class="toggle-menu">
+									<!--li><a href="MyPortfolioV.html">Home</a></li>
+									<li><a href="about.html" class="active">About</a></li>
+									<li><a href="skills.html">Skills</a></li>
+									<li><a href="experience.html">Experience</a></li>
+									<li><a href="education.html">Education</a></li>
+									<li><a href="projects.html">My Projects</a></li>
+									<li><a href="contact.html">Contact</a></li-->
+									<li><a href="MyPortfolioV.html">Home</a></li>
+									<li><a href="skills.html">Skills</a></li>
+									<li><a href="projects.html">My Projects</a></li>
+									<li><a href="about.html" class="active">About</a></li>
+									<li><a href="experience.html">Experience</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="social-blicon">
+							<a href="#" class="social-button twitter"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="social-button facebook"><i class="fab fa-facebook-square"></i></a>
+							<a href="#" class="social-button google"><i class="fab fa-google-plus"></i></a>
+							<a href="#" class="social-button dribbble"><i class="fab fa-dribbble"></i></a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<!--//header-->
+				<!--address-->
+				<div class="j-address">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-xs-12 col-md-4"><i class="fas fa-map-marker-alt"></i>  Saitama,Japan</div>
+							<div class="col-sm-12 col-xs-12 col-md-4"><i class="fas fa-mobile-alt"></i>  +81 123-4567-8900</div>
+							<div class="col-sm-12 col-xs-12 col-md-4"><i class="fas fa-envelope"></i><a href="mailto:blueskytree11@gmail.com">  blueskytree11@gmail.com</a></div>
+						</div>
+					</div>
+				</div>
+				<!--//address-->
+			</div>
+		</div>
+		<!--//banner-->
+		<!--about-->
+		<div class="about">
+			<div class="container">
+				<div class="c-title">
+					<h2 class="j-title">About Me</h2>
+				</div>
+				<div class="about-agileinfo row">
+					<div class="col-md-6 col-sm-12 col-xs-12 about-left">
+						<img src="images/himawari.jpg" class="img-fluid" alt="himawari.jpg">
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 about-right wthree">
+						<h3>Hi, I'm <span>Josetunen</span></h3>
+						<h4>Web Designer</h4>
+						<div class="row address j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>Age:</b></div>
+							<div class="col-md-7 col-sm-12 col-xs-12"><span>24</span></div>
+						</div>
+						<div class="row j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>Nationality:</b></div>
+							<div class="col-md-7 col-sm-12 col-xs-12">China</div>
+						</div>
+						<div class="row j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>Gender:</b></div>
+							<div class="col-md-7 col-sm-12 col-xs-12">Female</div>
+						</div>
+						<div class="row j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>ADDRESS:</b></div>
+							<div class="col-md-7 col-sm-12 col-xs-12">Saitama, Japan</div>
+						</div>
+						<div class="row j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>E-MAIL:</b></div>
+							<div class="col-md-7 col-xs-12 col-xs-12">blueskytree11@gmail.com</div>
+						</div>
+						<div class="row j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>WEBSITE:</b></div>
+							<div class="col-md-7 col-sm-12 col-xs-12">
+								<a href="https://sophiasnowy.github.io/Knowledge/portfolio/V/MyPortfolioV.html" target="_blank">
+									MyPortfolioV
+								</a>
+							</div>
+						</div>
+						<div class="row j-address-text">
+							<div class="col-md-5 col-sm-12 col-xs-12"><b>Hobby:</b></div>
+							<div class="col-md-7 col-sm-12 col-xs-12">Web design, Travel, Paragliding, etc.</div>
+						</div>
+						
+						<div class="hire-blgrids">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-7 col-custom">
+									<a href="#" class="wthree-more" data-text="DOWNLOAD CV">
+										<span>D</span><span>o</span><span>w</span><span>n</span><span>l</span><span>o</span><span>a</span><span>d</span> <span>c</span><span>v</span>
+									</a>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-5">
+									<a href="#" class="wthree-more bmore1" data-text="hire me">
+										<span>h</span><span>i</span><span>r</span><span>e</span> <span>m</span><span>e</span>
+									</a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>	
+							
+						
+					</div>
+					<div class="clearfix"></div>
+					<div class="about-text j-layout">
+						<blockquote>
+						<h6> こんにちは。ジョセツネンと申します。ふとした偶然をきっかけに中国から日本に来て、「若いうちにできるだけ海外を見て視野を広げて」という気持ちを持って新しい旅を始まりました。
+						私の夢は素晴らしいウェブデザイナーになりたいです。心と体で見つけた面白い発見をページにして残して、みんな「面白い！格好いい！楽しそう」と感じられるように、
+						そんなウェブページをデザインしたいです。また、人生のモットーは下記の通りです。</h6>
+						</blockquote>
+						<blockquote>
+							<p>Keep your face to the sunshine and you cannot see the shadows. It's what the sunflowers do.</p>
+							<cite>-- Helen Keller</cite>
+							<p>ひまわりのように顔をいつも太陽のほうに向けていて、影なんて見ていることはないわ。</p>
+							<cite>-- ヘレン・ケラー</cite>
+							<p>像向日葵一样永远朝向阳光，这样你就不会看到阴影。</p>
+							<cite>-- 海伦・凯勒</cite>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--//about-->
+		<!--footer-->
+		<div class="j-footer">
+			<div class="container">
+				<p>© 2019 All rights reserved | Design by Josetunen</p>
+			</div>
+		</div>
+		<!--//footer-->
+		<script>
+			$('.navicon').on('click',function(e){
+				e.preventDefault();
+				$(this).toggleClass('navicon--active');
+				$('.toggle').toggleClass('toggle--active');
+			});
+		</script>
+	</body>
+</html>
